@@ -17,7 +17,7 @@ int main(){
 	}
 	else if(result > 0) {
 	close(fd[0]);
-	size = write(fd[1], "Привет, мир!", 13);
+	size = write(fd[1], "Привет, мир!\n", 13);
         if(size != 13){
                 printf("Невозможно записать всю строку\n");
                 exit(-1);
@@ -31,7 +31,7 @@ int main(){
                 printf("Невозможно прочитать строку\n");
                 exit(-1);
         }
-        printf("%s\n", resstring);
+        printf("%s\n",resstring);
 	close(fd[0]);
 	}
         return 0;
